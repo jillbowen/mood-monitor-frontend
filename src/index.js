@@ -4,14 +4,15 @@ import './index.css';
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
+import dayReducer from './reducers/dayReducer';
 
 import App from './App';
 
 // let reducer = ''
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose;
 
-let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+let store = createStore(dayReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
     <Provider store={store}>
@@ -19,5 +20,3 @@ ReactDOM.render(
     </Provider>,
   document.getElementById('root')
 );
-
-
