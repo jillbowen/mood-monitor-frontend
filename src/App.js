@@ -1,16 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchDays} from './actions/fetchDays';
+import DaysContainer from './containers/DaysContainer';
 
 class App extends React.Component {
   
   render () {
     return (
       <div className="App">
-        App
+        <DaysContainer />
       </div>
     )
   }
 }
 
-export default connect()(App);
+export default App;
