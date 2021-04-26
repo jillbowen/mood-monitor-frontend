@@ -7,13 +7,13 @@ import DayInput from '../components/DayInput';
 class DaysContainer extends React.Component {
     
     componentDidMount() {
-        fetchDays()
+        this.props.fetchDays()
     }
     
     render() {
         return(
             <div>
-                <Days />
+                <Days days={this.props.days}/>
                 <DayInput />
             </div>
         )
@@ -22,8 +22,8 @@ class DaysContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        days: state.accounts
+        days: state.days
     }
 }
 
-export default connect()(DaysContainer);
+export default connect(mapStateToProps, {fetchDays})(DaysContainer);
