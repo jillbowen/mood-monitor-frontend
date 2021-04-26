@@ -8,7 +8,7 @@ import dayReducer from './reducers/dayReducer';
 
 import App from './App';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(dayReducer, composeEnhancers(applyMiddleware(thunk)))
 
