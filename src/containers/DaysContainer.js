@@ -13,8 +13,8 @@ class DaysContainer extends React.Component {
     render() {
         return(
             <div>
-                <Days days={this.props.days}/>
                 <DayInput />
+                <Days days={this.props.days}/>
             </div>
         )
     }
