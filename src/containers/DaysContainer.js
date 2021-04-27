@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchDays} from '../actions/fetchDays';
+import {fetchDays} from '../actions/days';
 import Days from '../components/Days';
 import DayInput from '../components/DayInput';
 
