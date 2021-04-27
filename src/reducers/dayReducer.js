@@ -5,6 +5,9 @@ export default function dayReducer(state= {days: []}, action) {
         case 'FETCH_DAYS':
             return {days: action.payload}
 
+        case 'ADD_DAY':
+            return {...state, days: [...state.days, action.payload]}
+
     default:
         return state
     }
