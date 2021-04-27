@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {addDay} from '../actions/days'
 
 class DayInput extends React.Component {
     
@@ -6,22 +8,28 @@ class DayInput extends React.Component {
         date: ''
     }
     
-    handleChange = (event) => {
+    handleOnChange = (event) => {
         this.setState({
-            [event.target.date]: event.target.value
+            [event.target.name]: event.target.value
         })
+    }
+
+    handleOnSubmit = (event) => {
+        event.preventDefault()
+        this.props.addDay(this.state)
     }
 
     render() {
         return (
             <div>
-                <form>
-                    <label>Date: </label>
-                    <input type="date" placeholder="Date of Mood Check-In" value={this.state.date} name="date" onChange={this.handleChange} />
+                <form onSubmit={this.handleOnSubmit}>
+                    <label>Date of Mood Check-In: </label>
+                    <input type="text" value={this.state.date} name="date" onChange={this.handleOnChange} /><br/>
+                    <input type="submit"/><br/><br/>
                 </form>
             </div>
         )
     }
 }
 
-export default DayInput;
+export default connect(null, {addDay})(DayInput);
