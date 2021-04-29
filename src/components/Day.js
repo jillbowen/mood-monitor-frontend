@@ -1,9 +1,12 @@
 import React from 'react';
 
 const Day = (props) => {
+    
+    let day = props.days[props.match.params.id - 1]
+    
     return (
         <div>
-            <li>{props.day.date}</li><br/>
+            <li>{day ? day.date : null}</li><br/>
         </div>
     )
 }
