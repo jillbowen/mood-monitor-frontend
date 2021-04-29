@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Route} from 'react-router-dom';
 import {fetchDays} from '../actions/days';
 import Days from '../components/Days';
 import DayInput from '../components/DayInput';
@@ -13,8 +14,8 @@ class DaysContainer extends React.Component {
     render() {
         return(
             <div>
-                <DayInput />
-                <Days days={this.props.days}/>
+                <Route path='/days/new' component={DayInput}/>
+                <Route exact path='/days' render={() => <Days days={this.props.days} />} />
             </div>
         )
     }
