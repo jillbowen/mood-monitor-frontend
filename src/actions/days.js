@@ -19,6 +19,8 @@ export const addDay = data => {
             method: 'POST', 
             body: JSON.stringify(data)
         })
+        .then(response => response.json())
+        .then(day => dispatch({type: 'ADD_DAY', payload: day}))
     }
 }
 
