@@ -1,9 +1,10 @@
 import React from 'react';
+import Day from './Day';
 
 const Days = (props) => {
     return (
         <div>
-            {props.days.map(day => <li key={day.id}>{day.date}</li>)} 
+            {props.days.map(day => <div key={day.id}><Day day={day} /></div>)} 
         </div>
     )
 }
