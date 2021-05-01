@@ -1,5 +1,6 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
+// import {Redirect} from 'react-router-dom';
+import MoodsContainer from '../containers/MoodsContainer';
 
 const Day = (props) => {
     
@@ -10,6 +11,8 @@ const Day = (props) => {
             <h1>
                 {day ? day.date : null}
             </h1><br/>
+
+            <MoodsContainer day={day}/>
         </div>
     )
 }
