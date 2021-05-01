@@ -3,7 +3,17 @@ import React from 'react';
 const Moods = (props) => {
     return (
         <div>
-            Moods
+            {props.moods && props.moods.map(mood => 
+                <ul key={mood.id}> 
+                    <li>Awake Rating: {mood.awake_rating}</li>
+                    <li>Calm Rating: {mood.calm_rating}</li>
+                    <li>Confidence Rating: {mood.confidence_rating}</li>
+                    <li>Happy Rating: {mood.happy_rating}</li>
+                    <li>Relaxed Rating: {mood.relaxed_rating}</li>
+                    <h3>Journal Entry:</h3>
+                    <p>{mood.journal_entry}</p><br/>
+                </ul>
+            )}
         </div>
     )
 }
