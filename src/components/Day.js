@@ -1,4 +1,5 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 
 const Day = (props) => {
     
@@ -6,7 +7,9 @@ const Day = (props) => {
     
     return (
         <div>
-            <li>{day ? day.date : null}</li><br/>
+            <h1>
+                {day ? day.date : null}
+            </h1><br/>
         </div>
     )
 }
