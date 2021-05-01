@@ -4,7 +4,7 @@ import MoodsContainer from '../containers/MoodsContainer';
 
 const Day = (props) => {
     
-    let day = props.days[props.match.params.id - 1]
+    let day = props.days.filter(day => day.id == props.match.params.id)[0]
     
     return (
         <div>
