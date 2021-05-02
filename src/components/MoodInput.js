@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { addMood } from '../actions/moods';
 import MoodSlider from './MoodSlider';
 
 class MoodInput extends React.Component {
@@ -18,13 +19,18 @@ class MoodInput extends React.Component {
             [event.target.name]: event.target.value
         })
     }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        // addMood(this.state, this.props.id)
+    }
     
     render() {
         return(
             <div>
                 <h2>How's Your Mood Today?</h2>
                 <p>(Scale: 1=low, 10=high)</p>
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <label>Rate Your Awakeness:</label><br/><br/><br/>
                         <MoodSlider name="awake_rating" value={this.state.awake_rating} onChange={this.handleChange}/><br/>
                         
