@@ -36,7 +36,8 @@ class MoodInput extends React.Component {
         return(
             <div>
                 <h2>How's Your Mood Today?</h2>
-                <h3>Rate Each Mood on a Scale of 1-10: 1=low, 10=high</h3>
+                <h3>Rate Each Mood on a Scale of 1-10</h3>
+                <h3>1=low, 10=high</h3> 
                     <form onSubmit={this.handleSubmit}>
                         <label>Rate Your Awakeness:</label>
                         <input type="number" min="1" max="10" value={this.state.awake_rating} name="awake_rating" onChange={this.handleChange}/><br/><br/>
