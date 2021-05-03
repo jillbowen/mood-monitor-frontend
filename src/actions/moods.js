@@ -8,6 +8,13 @@ export const addMood = (mood, dayId) => {
             body: JSON.stringify(mood)
         })
         .then(response => response.json())
-        .then(response => dispatch({type: 'ADD_MOOD', payload: response}))
+        .then(day => {
+            if (day.error) {
+                alert(day.error)
+            } else {
+            dispatch({type: 'ADD_MOOD', payload: day})
+            }
+        }
+        )
     }
 }
