@@ -21,7 +21,7 @@ export const addMood = (mood, dayId) => {
 
 export const deleteMood = (moodId, dayId) => {
     return (dispatch) => {
-        fetch(`http://localhost3000/api/v1/days/${dayId}/moods/${moodId}`, {
+        fetch(`http://localhost:3000/api/v1/days/${dayId}/moods/${moodId}`, {
             method: 'DELETE'
         })
         .then(response => response.json())
