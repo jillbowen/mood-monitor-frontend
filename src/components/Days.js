@@ -1,10 +1,11 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom';
-import Day from './Day';
+import {Link} from 'react-router-dom';
+import '../App.css';
 
 const Days = (props) => {
+    
     return (
-        <div>
+        <div className="days-div">
             {props.days.map(day => <li key={day.id}><Link to={`/days/${day.id}`}>{day.date}</Link></li>)} 
         </div>
     )

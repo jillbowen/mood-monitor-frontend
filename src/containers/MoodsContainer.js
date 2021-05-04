@@ -7,8 +7,8 @@ class MoodsContainer extends React.Component {
     render() {
         return(
             <div>
-                <MoodInput  day={this.props.day}/>
-                <h2>Ratings for today: </h2>
+                <MoodInput  day={this.props.day}/><br/>
+                <h2 className="mood-display">Ratings for today: </h2>
                 <Moods moods={this.props.day && this.props.day.moods}/>
             </div>
         )

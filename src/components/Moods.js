@@ -9,7 +9,7 @@ const Moods = (props) => {
     }
     
     return (
-        <div>
+        <div className="mood-display">
             {props.moods && props.moods.map(mood => 
                 <ul key={mood.id}> 
                     <h4>Time of Check-In: {mood.created_at}</h4>

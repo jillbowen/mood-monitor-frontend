@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addDay} from '../actions/days'
+import {addDay} from '../actions/days';
+import '../App.css';
 
 class DayInput extends React.Component {
     
@@ -18,13 +19,14 @@ class DayInput extends React.Component {
         event.preventDefault()
         this.props.addDay(this.state)
         this.setState({ date: ''})
+        this.props.history.push('/days');
     }
 
     render() {
         return (
-            <div>
+            <div className="new-day-div">
                 <form onSubmit={this.handleOnSubmit}>
-                    <label>Date of Mood Check-In: </label>
+                    <label className="date-label">Date of Mood Check-In: </label>
                     <input type="text" value={this.state.date} name="date" onChange={this.handleOnChange} /><br/>
                     <input type="submit"/><br/><br/>
                 </form>

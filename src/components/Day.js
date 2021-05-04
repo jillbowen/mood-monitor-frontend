@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Redirect} from 'react-router-dom';
 import MoodsContainer from '../containers/MoodsContainer';
 
 const Day = (props) => {
@@ -8,10 +7,9 @@ const Day = (props) => {
     
     return (
         <div>
-            <h1>
+            <h1 className="day-header">
                 {day ? day.date : null}
             </h1><br/>
-
             <MoodsContainer day={day}/>
         </div>
     )
