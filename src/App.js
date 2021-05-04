@@ -1,12 +1,13 @@
 import React from 'react';
-// import {connect} from 'react-redux';
 import DaysContainer from './containers/DaysContainer';
+import AppNavbar from './components/AppNavbar';
 
 class App extends React.Component {
   
   render () {
     return (
       <div className="App">
+        <AppNavbar />
         <DaysContainer />
       </div>
     )
