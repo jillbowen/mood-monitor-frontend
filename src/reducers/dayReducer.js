@@ -16,7 +16,18 @@ export default function dayReducer(state= {days: []}, action) {
                     return day
                 }
             })
-            return {...state, days: days}    
+            return {...state, days: days}
+            
+        case 'DELETE_MOOD':
+            let days_two = state.days.map(day => {
+                if (day.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return day
+                }
+            })
+            return {...state, days: days}
+            
     default:
         return state
     }

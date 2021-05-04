@@ -1,5 +1,9 @@
 import React from 'react';
 
+const handleDelete = () => {
+    
+}
+
 const Moods = (props) => {
     return (
         <div>
@@ -11,7 +15,8 @@ const Moods = (props) => {
                     <li>Happy Rating: {mood.happy_rating}</li>
                     <li>Relaxed Rating: {mood.relaxed_rating}</li>
                     <h3>Journal Entry:</h3>
-                    <p>{mood.journal_entry}</p><br/>
+                    <p>{mood.journal_entry}</p>
+                    <button onClick={handleDelete}>Delete Check-In</button><br/><br/><br/>
                 </ul>
             )}
         </div>

@@ -18,3 +18,13 @@ export const addMood = (mood, dayId) => {
         )
     }
 }
+
+export const deleteMood = (moodId, dayId) => {
+    return (dispatch) => {
+        fetch(`http://localhost3000/api/v1/days/${dayId}/moods/${moodId}`, {
+            method: 'DELETE'
+        })
+        .then(response => response.json())
+        .then(response => dispatch({type: 'DELETE_MOOD', payload: response }))
+    }
+}
