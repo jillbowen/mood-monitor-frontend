@@ -1,6 +1,13 @@
-.App {
+html {
+  height: 100%
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
   background-image: linear-gradient(aliceblue, #94cdff);
-  background-size: cover;
+  background-attachment: fixed;
 }
 
 .days-div {
@@ -26,5 +33,4 @@
 
 .mood-display {
   padding-left: 25px;
-  color: rgb(0, 5, 8);
 }
