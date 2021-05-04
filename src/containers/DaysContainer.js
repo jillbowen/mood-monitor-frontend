@@ -5,6 +5,7 @@ import {fetchDays} from '../actions/days';
 import Days from '../components/Days';
 import Day from '../components/Day';
 import DayInput from '../components/DayInput';
+import NavBar from '../components/NavBar';
 
 class DaysContainer extends React.Component {
     
@@ -15,6 +16,7 @@ class DaysContainer extends React.Component {
     render() {
         return(
             <div>
+                <NavBar/>
                 <Switch>
                     <Route path='/days/new' component={DayInput}/>
                     <Route exact path='/days' render={() => <Days days={this.props.days} />} />
