@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import {deleteMood} from '../actions/moods'
+import LikeButton from './LikeButton'
+
 
 const Moods = (props) => {
     
@@ -20,6 +22,7 @@ const Moods = (props) => {
                     <li>Relaxed Rating: {mood.relaxed_rating}</li>
                     <h4>Journal Entry:</h4>
                     <p>{mood.journal_entry}</p>
+                    <LikeButton /><br/>
                     <button onClick={() => handleDelete(mood)}>Delete Check-In</button><br/><br/><br/>
                 </ul>
             )}
