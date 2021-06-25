@@ -20,10 +20,10 @@ Add a new date, and for each day add as much mood tracking as you like. Each moo
 # ✍️ Contributing
 
 1. Fork and clone this repository
-2. Create a branch: git checkout -b <branch_name>
+2. Create a branch ```git checkout -b <branch_name>```
 3. Make your changes
-4. Commit changes: git commit -m '<commit-message>'
-5. Push to the original branch: git push origin <project_name>/<location>
+4. Commit changes ```git commit -m '<commit-message>'```
+5. Push to the original branch ```git push origin <project_name>/<location>```
 6. Create the pull request
 
 Or, see Github's documentation: [Creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
